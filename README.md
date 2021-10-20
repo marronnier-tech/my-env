@@ -15,9 +15,16 @@ git config --global user.name marronnier-tech
 git config --global user.email "Email Address"
 ```
 
-3. Install ansible with brew
+3. Execute script
+```
+sh con-env.sh
+```
 
-```
-brew install ansible
-```
+
 Let's clone this prj and get your best dev env!
+
+---
+To update Brewfile 
+```
+brew bundle dump
+```

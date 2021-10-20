@@ -1,0 +1,10 @@
+version: '3'
+services:
+  python3:
+    image: python:3.10.0-buster
+    restart: always
+    working_dir: '/root/src'
+    tty: true
+    volumes:
+      - ./src:/root/src
+
