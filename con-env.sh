@@ -3,5 +3,6 @@ brew bundle --file=./files/brew/Brewfile --verbose
 
 #NeoVim config
 mkdir -p ~/.config/nvim
-touch ~/.config/nvim/init.vim
+cp ./files/vim.d/.vimrc ~/.vimrc
+cp ./files/vim.d/.config/nvim/init.vim ~/.config/nvim/init.vim
 
