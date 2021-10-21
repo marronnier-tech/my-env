@@ -1,0 +1,4 @@
+- name: Execute brew bundle
+  command:
+    cmd: "brew bundle --file=./files/brew/Brewfile --verbose"
+

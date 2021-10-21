@@ -1,0 +1,5 @@
+- hosts: localhost
+  vars_files:
+      - ./roles/common/vars/main.yml
+  tasks:
+    - include_tasks: roles/common/tasks/main.yml
