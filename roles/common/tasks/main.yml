@@ -1,15 +1,15 @@
 - name: Get the env
-  ansible.builtin.group_by:
+  group_by:
     key: {{ env }}
  
 - name: Execute brew bundle
-  ansible.builtin.command:
+  command:
     cmd: "brew bundle --file=./files/brew/Brewfile --verbose"
   when:
     env == 'mac'
 
 - name: Set apk packages
-  ansible.builtin.command:
+  command:
     cmd: 'apk add {{ item }}'
   with_items:
     - "{{ apk_packages }}"
@@ -17,13 +17,13 @@
     env == 'ipad'
 
 - name: git user set
-  community.general.git_config:
+  git_config:
     scope: global
     name: user.name
     value: marronnier-tech
 
 - name: git email set
-  community.general.git_config:
+  git_config:
     scope: global
     name: user.email
     value: "{{ git_email }}"
