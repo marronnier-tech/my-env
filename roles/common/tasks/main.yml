@@ -9,8 +9,8 @@
     env == 'mac'
 
 - name: Set apk packages
-  command:
-    cmd: 'apk add {{ item }}'
+  apk:
+    name: "{{ item }}"
   with_items:
     - "{{ apk_packages }}"
   when:
