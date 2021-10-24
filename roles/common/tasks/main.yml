@@ -1,10 +1,10 @@
 - name: Get the env
   group_by:
-    key: {{ env }}
+    key: "{{ env }}"
  
 - name: Execute brew bundle
   command:
-    cmd: "brew bundle --file=./files/brew/Brewfile --verbose"
+    cmd: "brew bundle --file=./roles/common/files/brew/Brewfile --verbose"
   when:
     env == 'mac'
 
@@ -27,4 +27,42 @@
     scope: global
     name: user.email
     value: "{{ git_email }}"
+
+- name: make vim directories
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: '1777'
+  with_items:
+    - ~/.config/nvim
+    - ~/.vim/colors
+    - ~/.vim/autoload
+    - ~/.vim/bundle
+
+- name: set vim config file
+  copy:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    mode: '1777'
+  with_items:
+    - { src: './roles/common/files/vim.d/.vimrc', dest: '~/.vimrc' }
+    - { src: './roles/common/files/vim.d/.config/nvim/init.vim', dest: '~/.config/nvim/init.vim' }
+    
+- name: jellybeans.vim install
+  get_url:
+    url: https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim
+    dest: ~/.vim/colors/jellybeans.vim
+
+- name: pathogen.vim install
+  get_url:
+    url: https://tpo.pe/pathogen.vim
+    dest: ~/.vim/autoload/pathogen.vim
+    checksum: sha256:4113e270ed07c765b3246a5484a931bb55dd800613531de2ada5a28f4b95151f
+
+- name: vim packages install
+  git:
+    repo: "http://{{ user_name }}:{{ password }}@github.com/{{ item.repo }}.git"
+    dest: ~/.vim/bundle/{{ item.dest }}
+  with_items:
+    - "{{ vim_package }}"
 
