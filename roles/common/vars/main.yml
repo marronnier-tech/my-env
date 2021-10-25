@@ -1,3 +1,1 @@
-- vim_package:
-  - { repo: 'preservim/nerdtree', dest: 'nerdtree' }
-  - { repo: 'neoclide/coc.nvim', dest: 'coc.nvim' }
+- file_path: roles/common/files

@@ -3,7 +3,7 @@
       - ./roles/common/vars/main.yml
   vars_prompt:
     - name: "user_name"
-      prompt: "Please Enter Your GitHub ID:"
+      prompt: "Please Enter Your GitHub ID"
       private: no
     - name: "password"
       prompt: "Please Enter Your GitHub Password"

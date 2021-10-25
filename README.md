@@ -14,7 +14,7 @@ brew install git
 3. Execute Ansible
 MAILADDRESS is email address using GitHub.
 ```
-ansible-playbook site.yml --extra-vars "env=mac git_email=MAILADDRESS"
+ansible-playbook site.yml --extra-vars "env=mac git_email=MAILADDRESS site_dir=PATH"
 ```
 
 ---
@@ -39,7 +39,7 @@ apk add ansible
 3. Execute ansible
 MAILADDRESS is email address using GitHub.
 ```
-ansible-playbook site.yml --extra-vars "env=ipad git_email=MAILADDRESS"
+ansible-playbook site.yml --extra-vars "env=ipad git_email=MAILADDRESS site_dir=PATH"
 ```
 
 
