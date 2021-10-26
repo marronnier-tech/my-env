@@ -3,7 +3,7 @@ services:
   python3:
     build: .
     restart: always
-    working_dir: '/root'
+    working_dir: '/root/home'
     tty: true
     volumes:
-      - ../../../../../algorithm/python:/root/src/algorithm
+      - ./src:/root/home/code
