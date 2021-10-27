@@ -52,6 +52,7 @@
     - { src: '{{ site_dir }}/{{ file_path }}/vim.d/dein_lazy.toml', dest: '~/dein_lazy.toml' }
     - { src: '{{ site_dir }}/{{ file_path }}/vim.d/.config/nvim/init.vim', dest: '~/.config/nvim/init.vim' }
     - { src: '{{ site_dir }}/{{ file_path }}/python', dest: '~/Documents/python'}
+    - { src: '{{ site_dir }}/{{ file_path }}/golang', dest: '~/Documents/golang'}
     
 - name: jellybeans.vim install
   get_url:
