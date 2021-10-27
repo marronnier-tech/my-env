@@ -51,9 +51,11 @@
     - { src: '{{ site_dir }}/{{ file_path }}/vim.d/dein.toml', dest: '~/dein.toml' }
     - { src: '{{ site_dir }}/{{ file_path }}/vim.d/dein_lazy.toml', dest: '~/dein_lazy.toml' }
     - { src: '{{ site_dir }}/{{ file_path }}/vim.d/.config/nvim/init.vim', dest: '~/.config/nvim/init.vim' }
+    - { src: '{{ site_dir }}/{{ file_path }}/python', dest: '~/Documents/python'}
     
 - name: jellybeans.vim install
   get_url:
     url: https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim
     dest: ~/.vim/colors/jellybeans.vim
 
+- 
