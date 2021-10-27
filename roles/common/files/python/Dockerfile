@@ -14,3 +14,7 @@ COPY ./copy_files/.vimrc /root/.vimrc
 COPY ./copy_files/dein.toml /root/dein.toml
 COPY ./copy_files/dein_lazy.toml /root/dein_lazy.toml
 
+# for atcoder
+RUN pip3 install online-judge-tools;\
+npm install -g atcoder-cli;\
+pip3 install selenium;\
