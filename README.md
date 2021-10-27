@@ -10,14 +10,34 @@ Excute this command to install git.
 ```
 brew install git
 ```
+
+3. Execute Ansible
 ```
-git config --global user.name marronnier-tech
-git config --global user.email "Email Address"
+ansible-playbook site.yml --extra-vars "env=mac"
 ```
 
-3. Install ansible with brew
+---
+To update Brewfile 
+```
+brew bundle dump
+```
+
+
+### For iPad (iSH)
+1. Install git
+```
+apk add git
+```
+
+2. Install ansible
 
 ```
-brew install ansible
+apk add ansible
 ```
-Let's clone this prj and get your best dev env!
+
+3. Execute ansible
+```
+ansible-playbook site.yml --extra-vars "env=ipad"
+```
+
+

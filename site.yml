@@ -1,0 +1,15 @@
+- hosts: localhost
+  vars_files:
+      - ./roles/common/vars/main.yml
+  vars_prompt:
+    - name: "user_name"
+      prompt: "Please Enter Your GitHub ID"
+      private: no
+    - name: "git_email"
+      prompt: "Please Enter Your e-mail address registered on GitHub"
+      private: no
+    - name: "password"
+      prompt: "Please Enter Your GitHub Password"
+      private: yes
+  tasks:
+    - include_tasks: roles/common/tasks/main.yml

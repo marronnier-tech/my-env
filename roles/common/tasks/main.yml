@@ -1,0 +1,62 @@
+- name: Get the env
+  group_by:
+    key: "{{ env }}"
+ 
+- name: Execute brew bundle
+  command:
+    cmd: "brew bundle --file={{ file_path }}/brew/Brewfile --verbose"
+  when:
+    env == 'mac'
+
+- name: Set apk packages
+  apk:
+    name: "{{ item }}"
+  with_items:
+    - "{{ apk_packages }}"
+  when:
+    env == 'ipad'
+
+- name: git user set
+  git_config:
+    scope: global
+    name: user.name
+    value: marronnier-tech
+
+- name: git email set
+  git_config:
+    scope: global
+    name: user.email
+    value: "{{ git_email }}"
+
+- name: make vim directories
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: '1777'
+  with_items:
+    - ~/.config/nvim
+    - ~/.vim/colors
+    - ~/.cache/dein
+
+- name: set vim config file
+  file:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    state: link
+    force: yes
+    owner: tocchy
+    #mode: '1777'
+  with_items:
+    - { src: '{{ site_dir }}/{{ file_path }}/vim.d/.vimrc', dest: '~/.vimrc' }
+    - { src: '{{ site_dir }}/{{ file_path }}/vim.d/dein.toml', dest: '~/dein.toml' }
+    - { src: '{{ site_dir }}/{{ file_path }}/vim.d/dein_lazy.toml', dest: '~/dein_lazy.toml' }
+    - { src: '{{ site_dir }}/{{ file_path }}/vim.d/.config/nvim/init.vim', dest: '~/.config/nvim/init.vim' }
+    - { src: '{{ site_dir }}/{{ file_path }}/python', dest: '~/Documents/python'}
+    - { src: '{{ site_dir }}/{{ file_path }}/golang', dest: '~/Documents/golang'}
+    
+- name: jellybeans.vim install
+  get_url:
+    url: https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim
+    dest: ~/.vim/colors/jellybeans.vim
+
+- 

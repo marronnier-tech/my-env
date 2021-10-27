@@ -1,0 +1,26 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-drivers"
+tap "homebrew/core"
+brew "ansible"
+brew "ansible-lint"
+brew "cask"
+brew "docker"
+brew "mas"
+brew "neovim"
+brew "nodebrew"
+brew "tree"
+brew "yarn"
+cask "chrome-devtools"
+cask "eqmac"
+cask "google-drive"
+cask "karabiner-elements"
+cask "logitech-g-hub"
+cask "zoom"
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "LINE", id: 539883307
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "White Noise Lite", id: 431364704
