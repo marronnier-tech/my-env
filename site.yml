@@ -5,6 +5,9 @@
     - name: "user_name"
       prompt: "Please Enter Your GitHub ID"
       private: no
+    - name: "git_email"
+      prompt: "Please Enter Your e-mail address registered on GitHub"
+      private: no
     - name: "password"
       prompt: "Please Enter Your GitHub Password"
       private: yes
