@@ -1,0 +1,7 @@
+alias gc='git checkout'
+alias gcb=' git checkout -b'
+alias gcm='git commit -m'
+alias gps='git push'
+alias gpu='git pull'
+alias dcu='docker-compose up'
+alias dcs='docker-compose stop'

@@ -1,1 +1,3 @@
 memo
+roles/common/files/python/src
+roles/common/files/brew/Brewfile.lock.json
