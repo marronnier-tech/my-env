@@ -1,7 +1,3 @@
-- name: debug
-  debug:
-    msg: "{{ file_path }}"
-
 - name: Get the env
   group_by:
     key: "{{ env }}"
@@ -64,7 +60,3 @@
     url: https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim
     dest: ~/.vim/colors/jellybeans.vim
 
-- name: source zsh
-  shell: source ~/.zshrc
-  when:
-    env == 'mac'
