@@ -28,6 +28,12 @@
     name: user.email
     value: "{{ git_email }}"
 
+- name: git push.default set
+  git_config:
+    scope: global
+    name: push.default
+    value: current
+
 - name: make vim directories
   file:
     path: "{{ item }}"
