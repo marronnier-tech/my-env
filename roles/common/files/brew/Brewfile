@@ -4,6 +4,10 @@ tap "homebrew/cask-drivers"
 tap "homebrew/core"
 brew "ansible"
 brew "ansible-lint"
+brew "autoconf"
+brew "automake"
+brew "libtool"
+brew "pkg-config"
 brew "cask"
 brew "docker"
 brew "mas"
@@ -24,3 +28,4 @@ mas "LINE", id: 539883307
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "White Noise Lite", id: 431364704
+mas "Xcode", id: 497799835
