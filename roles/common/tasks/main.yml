@@ -66,3 +66,6 @@
     url: https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim
     dest: ~/.vim/colors/jellybeans.vim
 
+- name: pynvim install
+  command: "python3 -m pip install --user --upgrade pynvim"
+
