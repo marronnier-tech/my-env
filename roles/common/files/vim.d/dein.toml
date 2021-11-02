@@ -13,3 +13,6 @@ repo = 'nanotech/jellybeans.vim'
 hook_add = '''
     colorscheme jellybeans
 '''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
