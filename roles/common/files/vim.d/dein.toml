@@ -15,7 +15,11 @@ hook_add = '''
 '''
 
 [[plugins]]
+<<<<<<< HEAD
 repo = 'vim-airline/vim-airline'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
+repo = 'tpope/vim-surround'
