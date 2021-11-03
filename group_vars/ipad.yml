@@ -1,5 +1,0 @@
-- apk_packages:
-    - docker
-    - curl
-    - neovim
-    - tree
