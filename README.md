@@ -13,7 +13,7 @@ brew install git
 
 3. Execute Ansible
 ```
-ansible-playbook site.yml --extra-vars "env=mac"
+ansible-playbook site.yml
 ```
 
 ---
@@ -21,23 +21,3 @@ To update Brewfile
 ```
 brew bundle dump
 ```
-
-
-### For iPad (iSH)
-1. Install git
-```
-apk add git
-```
-
-2. Install ansible
-
-```
-apk add ansible
-```
-
-3. Execute ansible
-```
-ansible-playbook site.yml --extra-vars "env=ipad"
-```
-
-

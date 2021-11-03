@@ -5,16 +5,6 @@
 - name: Execute brew bundle
   command:
     cmd: "brew bundle --file={{ file_path }}/brew/Brewfile --verbose"
-  when:
-    env == 'mac'
-
-- name: Set apk packages
-  apk:
-    name: "{{ item }}"
-  with_items:
-    - "{{ apk_packages }}"
-  when:
-    env == 'ipad'
 
 - name: git user set
   git_config:
