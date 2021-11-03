@@ -3,3 +3,22 @@ repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo = 'preservim/nerdtree'
+hook_add = '''
+    nnoremap <leader>n :NERDTreeFocus<CR>
+    nnoremap <C-n> :NERDTree<CR>
+'''
+    
+[[plugins]]
+repo = 'nanotech/jellybeans.vim'
+hook_add = '''
+    colorscheme jellybeans
+'''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
+repo = 'tpope/vim-surround'
