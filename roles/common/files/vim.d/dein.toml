@@ -15,7 +15,6 @@ hook_add = '''
 '''
 
 [[plugins]]
-<<<<<<< HEAD
 repo = 'vim-airline/vim-airline'
 
 [[plugins]]
