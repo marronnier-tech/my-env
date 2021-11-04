@@ -54,3 +54,7 @@
 - name: pynvim install
   command: "python3 -m pip install --user --upgrade pynvim"
 
+- name: set venv
+  shell: "python3 -m venv atc"
+  chdir: ~/Documents/python/atcoder
+
