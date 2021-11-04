@@ -60,7 +60,11 @@
     - { src: '{{ file_path }}/vim.d/.config/nvim/init.vim', dest: '~/.config/nvim/init.vim' }
     - { src: '{{ file_path }}/python', dest: '~/Documents/python'}
     - { src: '{{ file_path }}/golang', dest: '~/Documents/golang'}
-    
+
+- name: set venv
+  shell: "python3 -m venv atc"
+  chdir: ~/Documents/python/atcoder
+
 - name: jellybeans.vim install
   get_url:
     url: https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim
