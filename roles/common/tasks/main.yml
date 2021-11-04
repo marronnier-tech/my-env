@@ -1,6 +1,12 @@
 - name: Execute brew bundle
   ansible.builtin.command:
     cmd: "brew bundle --file={{ file_path }}/brew/Brewfile --verbose"
+  register: brew_bundle
+  ignore_errors: yes
+
+- name: output result of brew bundle
+  debug:
+    msg: "{{ brew_bundle }}"
 
 - name: git user set
   community.general.git_config:
