@@ -5,16 +5,6 @@
 - name: Execute brew bundle
   command:
     cmd: "brew bundle --file={{ file_path }}/brew/Brewfile --verbose"
-  when:
-    env == 'mac'
-
-- name: Set apk packages
-  apk:
-    name: "{{ item }}"
-  with_items:
-    - "{{ apk_packages }}"
-  when:
-    env == 'ipad'
 
 - name: git user set
   git_config:
@@ -27,6 +17,12 @@
     scope: global
     name: user.email
     value: "{{ git_email }}"
+
+- name: git push.default set
+  git_config:
+    scope: global
+    name: push.default
+    value: current
 
 - name: make vim directories
   file:
@@ -47,16 +43,14 @@
     owner: tocchy
     #mode: '1777'
   with_items:
-    - { src: '{{ site_dir }}/{{ file_path }}/vim.d/.vimrc', dest: '~/.vimrc' }
-    - { src: '{{ site_dir }}/{{ file_path }}/vim.d/dein.toml', dest: '~/dein.toml' }
-    - { src: '{{ site_dir }}/{{ file_path }}/vim.d/dein_lazy.toml', dest: '~/dein_lazy.toml' }
-    - { src: '{{ site_dir }}/{{ file_path }}/vim.d/.config/nvim/init.vim', dest: '~/.config/nvim/init.vim' }
-    - { src: '{{ site_dir }}/{{ file_path }}/python', dest: '~/Documents/python'}
-    - { src: '{{ site_dir }}/{{ file_path }}/golang', dest: '~/Documents/golang'}
+    - { src: '{{ file_path }}/.zshrc', dest: '~/.zshrc' }
+    - { src: '{{ file_path }}/vim.d/.vimrc', dest: '~/.vimrc' }
+    - { src: '{{ file_path }}/vim.d/dein.toml', dest: '~/dein.toml' }
+    - { src: '{{ file_path }}/vim.d/dein_lazy.toml', dest: '~/dein_lazy.toml' }
+    - { src: '{{ file_path }}/vim.d/.config/nvim/init.vim', dest: '~/.config/nvim/init.vim' }
+    - { src: '{{ file_path }}/python', dest: '~/Documents/python'}
+    - { src: '{{ file_path }}/golang', dest: '~/Documents/golang'}
     
-- name: jellybeans.vim install
-  get_url:
-    url: https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim
-    dest: ~/.vim/colors/jellybeans.vim
+- name: pynvim install
+  command: "python3 -m pip install --user --upgrade pynvim"
 
-- 

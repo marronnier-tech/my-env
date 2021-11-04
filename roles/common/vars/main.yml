@@ -1,2 +1,2 @@
-- file_path: roles/common/files
 - site_dir: /Users/tocchy/Documents/my-env
+- file_path: "{{ site_dir }}/roles/common/files"

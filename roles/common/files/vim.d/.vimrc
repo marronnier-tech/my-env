@@ -67,13 +67,6 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 "inoremap <Left> <Nop>
 "inoremap <Right> <Nop>
 
-colorscheme jellybeans
-
-" NERDTree command
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-
-
 " HTML complement
 augroup MyXML
   autocmd!
