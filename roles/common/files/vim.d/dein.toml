@@ -22,3 +22,10 @@ repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
 repo = 'tpope/vim-surround'
+
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+rev = 'release'
+build = '''
+  git checkout release
+'''
