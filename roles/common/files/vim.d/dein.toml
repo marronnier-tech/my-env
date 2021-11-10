@@ -7,6 +7,9 @@ hook_add = '''
     nnoremap <leader>n :NERDTreeFocus<CR>
     nnoremap <C-n> :NERDTree<CR>
 '''
+
+[[plugins]]
+repo = 'preservim/nerdcommenter'
     
 [[plugins]]
 repo = 'nanotech/jellybeans.vim'
@@ -36,4 +39,3 @@ rev = 'release'
 build = '''
   git checkout release
 '''
-
