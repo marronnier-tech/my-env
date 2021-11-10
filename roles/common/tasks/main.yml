@@ -52,6 +52,12 @@
     - { src: '{{ file_path }}/vim.d/.config/nvim/init.vim', dest: '~/.config/nvim/init.vim' }
     - { src: '{{ file_path }}/python', dest: '~/Documents/python'}
     - { src: '{{ file_path }}/golang', dest: '~/Documents/golang'}
+
+- name: install power line fonts
+  ansible.builtin.command:
+    cmd: sh install.sh
+  args:
+    chdir: "{{ file_path }}/vim.d/fonts/"
     
 - name: pynvim install
   ansible.builtin.command: "python3 -m pip install --user --upgrade pynvim"
