@@ -1,23 +1,15 @@
 # my-env
-## ready to use
-Excute this command to install git.
+## To execute
 ### For Mac OS
-1. Install Homebrew
+
+Execute Start command
 ```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-2. Ready to use git
-```
-brew install git
+sh start.sh
 ```
 
-3. Execute Ansible
-```
-ansible-playbook site.yml
-```
+## To mentenance
 
----
-To update Brewfile 
+Execute Mentenance command
 ```
-brew bundle dump
+sh mentenance.sh
 ```
