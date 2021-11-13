@@ -1,3 +1,5 @@
 memo
 roles/common/files/python/src
+roles/common/files/python/atcoder/atc/
 roles/common/files/brew/Brewfile.lock.json
+roles/common/files/python/atcoder/atc

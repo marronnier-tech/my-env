@@ -57,6 +57,7 @@ set hlsearch
 " ESC double highlight off
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
+
 " 矢印キーを無効にする
 "noremap <Up> <Nop>
 "noremap <Down> <Nop>
@@ -112,3 +113,5 @@ syntax enable
 if dein#check_install()
   call dein#install()
 endif
+
+let mapleader = "\<SPACE>"
