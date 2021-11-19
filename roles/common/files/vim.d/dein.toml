@@ -39,3 +39,6 @@ rev = 'release'
 build = '''
   git checkout release
 '''
+
+[[plugins]]
+repo = 'xavierchow/vim-swagger-preview'
