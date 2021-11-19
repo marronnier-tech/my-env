@@ -43,6 +43,12 @@
     - { src: '{{ file_path }}/python', dest: '~/Documents/python'}
     - { src: '{{ file_path }}/golang', dest: '~/Documents/golang'}
 
+- name: set vim swagger tool
+  ansible.builtin.copy:
+    src: "~/.cache/dein/repos/github.com/xavierchow/vim-swagger-preview/.zshenv"
+    dest: "~/.zshenv"
+    mode: '1777'
+
 - name: install power line fonts
   ansible.builtin.command:
     cmd: sh install.sh
