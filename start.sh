@@ -30,3 +30,4 @@ brew bundle --file=./brew/Brewfile --verbose
 echo "The Github Personal Access Token is here."
 cat ../token/github.txt
 ansible-playbook site.yml
+. ~/.zshrc

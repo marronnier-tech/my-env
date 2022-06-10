@@ -17,5 +17,5 @@ sh start.sh
 
 Execute Mentenance command
 ```
-sh mentenance.sh
+sh maintenance.sh
 ```
