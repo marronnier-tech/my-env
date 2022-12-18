@@ -4,8 +4,8 @@ repo = 'Shougo/dein.vim'
 [[plugins]]
 repo = 'preservim/nerdtree'
 hook_add = '''
-    nnoremap <leader>n :NERDTreeFocus<CR>
-    nnoremap <C-n> :NERDTree<CR>
+  nnoremap <leader>n :NERDTreeFocus<CR>
+  nnoremap <C-n> :NERDTree<CR>
 '''
 
 [[plugins]]
@@ -18,19 +18,26 @@ hook_add = '''
 '''
 
 [[plugins]]
+# status bar looks good
 repo = 'vim-airline/vim-airline'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 depends = 'vim-airline'
 hook_add = '''
-    let g:airline_theme = 'jellybeans'
-    let g:airline#extensions#tabline#enabled = 1
-    let g:airline#extensions#tabline#buffer_idx_mode = 1
-    let g:airline#extensions#tabline#fnamemod = ':t'
+  let g:airline_theme = 'jellybeans'
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#tabline#buffer_idx_mode = 1
+  let g:airline#extensions#tabline#fnamemod = ':t'
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+  let g:airline_left_sep = '⮀'
+  let g:airline_left_alt_sep = '⮁'
 '''
 
 [[plugins]]
+# surround edit easily. ex. (), {}, "", ''
 repo = 'tpope/vim-surround'
 
 [[plugins]]
@@ -38,6 +45,23 @@ repo = 'neoclide/coc.nvim'
 rev = 'release'
 build = '''
   git checkout release
+'''
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+hook_add= '''
+  :command Gad Gwrite
+  :command Gcm Git<Space>commit
+  :command Gst Git<Space>status
+  :command Gps Git<Space>push
+  :command Glg Git<Space>log
+  :command Gpu Git<Space>pull
+  :command Grm Git<Space>Remove
+  :command Gdf Gdiff
+  :command Gc Gread
 '''
 
 [[plugins]]

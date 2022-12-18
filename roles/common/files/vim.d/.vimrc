@@ -39,9 +39,9 @@ set list listchars=tab:\▸\-
 " Tab char to half space
 set expandtab
 " Tab space size
-set tabstop=4
+set tabstop=2
 " rowtop tab space size
-set shiftwidth=4
+set shiftwidth=2
 
 " Search
 " large and small identity if small
