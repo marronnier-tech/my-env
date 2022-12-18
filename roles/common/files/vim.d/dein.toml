@@ -18,6 +18,7 @@ hook_add = '''
 '''
 
 [[plugins]]
+# status bar looks good
 repo = 'vim-airline/vim-airline'
 
 [[plugins]]
@@ -28,9 +29,15 @@ hook_add = '''
   let g:airline#extensions#tabline#enabled = 1
   let g:airline#extensions#tabline#buffer_idx_mode = 1
   let g:airline#extensions#tabline#fnamemod = ':t'
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+  let g:airline_left_sep = '⮀'
+  let g:airline_left_alt_sep = '⮁'
 '''
 
 [[plugins]]
+# surround edit easily. ex. (), {}, "", ''
 repo = 'tpope/vim-surround'
 
 [[plugins]]
