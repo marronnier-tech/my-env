@@ -47,12 +47,12 @@ repo = 'airblade/vim-gitgutter'
 repo = 'tpope/vim-fugitive'
 hook_add= '''
   :command Gad Gwrite
-  :command Gcm Gcommit
-  :command Gst Gstatus
-  :command Gps Gpush
+  :command Gcm Git<Space>commit
+  :command Gst Git<Space>status
+  :command Gps Git<Space>push
+  :command Glg Git<Space>log
+  :command Gpu Git<Space>pull
+  :command Grm Git<Space>Remove
   :command Gdf Gdiff
-  :command Glg Glog
   :command Gc Gread
-  :command Gpu Gpull
-  :command Grm GRemove
 '''
