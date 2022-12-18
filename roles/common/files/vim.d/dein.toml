@@ -63,3 +63,6 @@ hook_add= '''
   :command Gdf Gdiff
   :command Gc Gread
 '''
+
+[[plugins]]
+repo = 'xavierchow/vim-swagger-preview'
