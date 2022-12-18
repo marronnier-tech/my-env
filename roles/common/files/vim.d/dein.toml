@@ -4,8 +4,8 @@ repo = 'Shougo/dein.vim'
 [[plugins]]
 repo = 'preservim/nerdtree'
 hook_add = '''
-    nnoremap <leader>n :NERDTreeFocus<CR>
-    nnoremap <C-n> :NERDTree<CR>
+  nnoremap <leader>n :NERDTreeFocus<CR>
+  nnoremap <C-n> :NERDTree<CR>
 '''
 
 [[plugins]]
@@ -24,10 +24,10 @@ repo = 'vim-airline/vim-airline'
 repo = 'vim-airline/vim-airline-themes'
 depends = 'vim-airline'
 hook_add = '''
-    let g:airline_theme = 'jellybeans'
-    let g:airline#extensions#tabline#enabled = 1
-    let g:airline#extensions#tabline#buffer_idx_mode = 1
-    let g:airline#extensions#tabline#fnamemod = ':t'
+  let g:airline_theme = 'jellybeans'
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#tabline#buffer_idx_mode = 1
+  let g:airline#extensions#tabline#fnamemod = ':t'
 '''
 
 [[plugins]]
@@ -38,4 +38,21 @@ repo = 'neoclide/coc.nvim'
 rev = 'release'
 build = '''
   git checkout release
+'''
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+hook_add= '''
+  :command Gad Gwrite
+  :command Gcm Gcommit
+  :command Gst Gstatus
+  :command Gps Gpush
+  :command Gdf Gdiff
+  :command Glg Glog
+  :command Gc Gread
+  :command Gpu Gpull
+  :command Grm GRemove
 '''
