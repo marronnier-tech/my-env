@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 echo "If Github Personal Access Token is not registered, stop running and register one."
 echo "Did you register some token in your account on your computer?(y/n)"

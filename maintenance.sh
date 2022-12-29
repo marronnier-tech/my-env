@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 DATE=`date +%Y%m%d-%H%M%S`
 CURRENT_DIR=`pwd`
