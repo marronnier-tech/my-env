@@ -63,3 +63,19 @@
   ansible.builtin.command: 
     cmd: "python3 -m venv atc"
     chdir: ~/Documents/python/atcoder
+
+- name: set System Preferences
+  community.general.osx_defaults:
+    key: "{{ item.key }}"
+    type: "{{ item.type }}"
+    value: "{{ item.value }}"
+  with_items: "{{ osx_defaults_global }}"
+
+- name: set System Preferences out of global domain
+  community.general.osx_defaults:
+    domain: "{{ item.domain }}"
+    key: "{{ item.key }}"
+    type: "{{ item.type }}"
+    value: "{{ item.value }}"
+    state: "{{ item.state }}"
+  with_items: "{{ osx_defaults_domain }}"

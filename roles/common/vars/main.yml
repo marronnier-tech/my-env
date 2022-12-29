@@ -1,2 +1,166 @@
 - site_dir: /Users/tocchy/Documents/my-env
+
 - file_path: "{{ site_dir }}/roles/common/files"
+
+- osx_defaults_global:
+
+  - key: AppInterfaceStyle
+    type: string
+    value: Dark
+
+  - key: AppleLanguages
+    type: array
+    value:
+      - "ja-JP"
+
+  - key: AppleShowScrollBars
+    type: string
+    value: Automatic
+
+  - key: AppleShowAllExtentions
+    type: boolean
+    value: 1
+
+  - key: "_HIHideMenuBar"
+    type: boolean
+    value: 1
+
+- osx_defaults_domain:
+
+  - domain: com.apple.dock
+    key:  autohide
+    type: int
+    value: 1
+    state: present
+
+  - domain: com.apple.dock
+    key: largesize
+    type: float
+    value: 128
+    state: present
+
+  - domain: com.apple.dock
+    key: orientation
+    type: string
+    value: left
+    state: present
+
+  - domain: com.apple.dock
+    key: mineffect
+    type: string
+    value: genie
+    state: present
+
+  - domain: com.apple.dock
+    key: orientation
+    type: string
+    value: left
+    state: present
+
+  - domain: com.apple.universalaccessAuthWarning
+    key: "/Applications/lghub.app"
+    type: boolean
+    value: true
+    state: present
+
+  - domain: com.apple.universalaccessAuthWarning
+    key: "/Applications/lghub.app/Contents/MacOS/lghub"
+    type: boolean
+    value: true
+    state: present
+
+  - domain: com.apple.universalaccessAuthWarning
+    key: "2::/Library/Application Support/org.pqrs/Karabiner-Elements/bin"
+    type: boolean
+    value: true
+    state: present
+
+  - domain: com.apple.universalaccessAuthWarning
+    key: "2::/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_grabber"
+    type: boolean
+    value: true
+    state: present
+
+  - domain: com.apple.universalaccessAuthWarning
+    key: "2::/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_observer"
+    type: boolean
+    value: true
+    state: present
+
+  - domain: com.apple.universalaccessAuthWarning
+    key: "2::/Users/tocchy/Library/Application Support/Steam/steamapps/common/Euro Truck Simulator 2/Euro Truck Simulator 2.app"
+    type: boolean
+    value: true
+    state: present
+
+  - domain: com.apple.universalaccessAuthWarning
+    key: "2::/Users/tocchy/Library/Application Support/Steam/steamapps/common/Euro Truck Simulator 2/Euro Truck Simulator 2.app/Contents/MacOS/eurotrucks2"
+    type: boolean
+    value: true
+    state: present
+
+  - domain: com.apple.universalaccessAuthWarning
+    key: "2::/Users/tocchy/Library/Application Support/Steam/steamapps/common/Euro Truck Simulator 2/Euro Truck Simulator 2.app/Contents/MacOS/eurotrucks2"
+    type: boolean
+    value: true
+    state: present
+
+  - domain: com.apple.universalaccessAuthWarning
+    key: "3::/Applications"
+    type: boolean
+    value: true
+    state: present
+
+  - domain: com.apple.universalaccessAuthWarning
+    key: "3::/Applications/Slack.app"
+    type: boolean
+    value: true
+    state: present
+
+  - domain: com.apple.universalaccessAuthWarning
+    key: "3::/Applications/lghub.app"
+    type: boolean
+    value: true
+    state: present
+
+  - domain: com.apple.universalaccessAuthWarning
+    key: "3::/Applications/zoom.us.app"
+    type: boolean
+    value: true
+    state: present
+
+  - domain: com.apple.universalaccessAuthWarning
+    key: "3::/Applications/zoom.us.app/Contents/MacOS/zoom.us"
+    type: boolean
+    value: true
+    state: present
+
+  - domain: com.apple.universalaccessAuthWarning
+    key: "3::us.zoom.xos"
+    type: boolean
+    value: true
+    state: present
+
+  - domain: com.apple.universalaccessAuthWarning
+    key: "com.logi.ghub"
+    type: boolean
+    value: true
+    state: present
+
+  - domain: com.apple.Accessibility
+    key: KeyRepeatDelay
+    type: float
+    value: 0.5
+    state: present
+
+  - domain: com.apple.Accessibility
+    key: KeyRepeatEnabled
+    type: int
+    value: 1
+    state: present
+
+  - domain: com.apple.Accessibility
+    key: KeyRepeatInterval
+    type: float
+    value: 0.083333333
+    state: present
