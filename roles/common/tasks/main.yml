@@ -36,6 +36,7 @@
     #mode: '1777'
   with_items:
     - { src: '{{ file_path }}/.zshrc', dest: '~/.zshrc' }
+    - { src: '{{ file_path }}/tmux/.tmux.conf', dest: '~/.tmux.conf' }
     - { src: '{{ file_path }}/vim.d/.vimrc', dest: '~/.vimrc' }
     - { src: '{{ file_path }}/vim.d/dein.toml', dest: '~/dein.toml' }
     - { src: '{{ file_path }}/vim.d/dein_lazy.toml', dest: '~/dein_lazy.toml' }
