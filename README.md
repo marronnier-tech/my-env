@@ -10,12 +10,12 @@ See [the official document](https://docs.github.com/ja/authentication/keeping-yo
 2. Run
 Execute Start command
 ```
-sh start.sh
+zsh start.sh
 ```
 
 ## To mentenance
 
 Execute Mentenance command
 ```
-sh maintenance.sh
+zsh maintenance.sh
 ```
