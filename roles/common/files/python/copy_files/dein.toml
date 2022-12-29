@@ -1,8 +1,0 @@
-[[plugins]]
-repo = 'Shougo/dein.vim'
-
-[[plugins]]
-repo = 'preservim/nerdtree'
-
-[[plugins]]
-repo = 'neoclide/coc.nvim'
