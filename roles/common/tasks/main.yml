@@ -59,11 +59,6 @@
 - name: pynvim install
   ansible.builtin.command: "python3 -m pip install --user --upgrade pynvim"
 
-- name: set venv
-  ansible.builtin.command: 
-    cmd: "python3 -m venv atc"
-    chdir: ~/Documents/python/atcoder
-
 - name: set System Preferences
   community.general.osx_defaults:
     key: "{{ item.key }}"
