@@ -27,7 +27,13 @@ echo "--------------------------------------------------------------------------
 echo "Auto Install System is now started."
 brew update
 brew bundle --file=./brew/Brewfile --verbose
-echo "The Github Personal Access Token is here."
-cat ../token/github.txt
+
+VARDIR=roles/common/vars
+export `cat .env`
+cp ${VARDIR}/secret.yml.example ${VARDIR}/secret.yml
+sed -i "" "s/__git_user_name__/${GITHUB_ID}/" ${VARDIR}/secret.yml
+sed -i "" "s/__git_email__/${GITHUB_EMAIL}/" ${VARDIR}/secret.yml
+sed -i "" "s/__git_access_token__/${GITHUB_TOKEN}/" ${VARDIR}/secret.yml
+cat ${VARDIR}/secret.yml
 ansible-playbook site.yml
 . ~/.zshrc
