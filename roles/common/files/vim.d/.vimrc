@@ -6,6 +6,8 @@ set autoread
 set hidden
 " show input command on status
 set showcmd
+" auto change directory to the herarchy of the file
+set autochdir
 
 " looks good
 " row number
