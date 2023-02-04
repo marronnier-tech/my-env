@@ -23,14 +23,14 @@ Edit `.env` file dependent on each environment
 
 
 #### Run
-Execute Start command
+Execute Start script
 ```
-zsh start.sh
+./start.sh
 ```
 
 ## To mentenance
 
-Execute Mentenance command
+Execute Mentenance script
 ```
-zsh maintenance.sh
+./maintenance.sh
 ```
